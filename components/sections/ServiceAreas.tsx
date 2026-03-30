@@ -89,6 +89,22 @@ export default function ServiceAreas() {
                 {area}
               </motion.span>
             ))}
+            {/* Edge-zone line */}
+            <p
+              className="w-full text-sm mt-1"
+              style={{ color: "rgba(255,248,232,0.4)", fontFamily: "var(--font-sora)", fontSize: "13px" }}
+            >
+              Don&apos;t see your city? Call Jeremiah —{" "}
+              <a
+                href="tel:5203701039"
+                style={{ color: "rgba(255,117,24,0.75)", textDecoration: "none" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#FF7518"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,117,24,0.75)"; }}
+              >
+                (520) 370-1039
+              </a>
+              {" "}— we may still be able to help.
+            </p>
           </motion.div>
         </div>
       </div>

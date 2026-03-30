@@ -64,10 +64,10 @@ export default function Process() {
           </p>
         </motion.div>
 
-        {/* Steps grid */}
+        {/* Steps grid — steps 01–02 */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px"
-          style={{ border: "1px solid rgba(255,117,24,0.15)" }}>
-          {steps.map((step, i) => (
+          style={{ border: "1px solid rgba(255,117,24,0.15)", marginBottom: "0" }}>
+          {steps.slice(0, 2).map((step, i) => (
             <motion.div
               key={step.num}
               initial={{ opacity: 0, y: 24 }}
@@ -79,25 +79,85 @@ export default function Process() {
                 borderRight: "1px solid rgba(255,117,24,0.1)",
                 borderBottom: "1px solid rgba(255,117,24,0.1)",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.backgroundColor = "#141118";
-              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#141118"; }}
             >
-              <span
-                className="text-3xl font-bold leading-none"
-                style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}
+              <span className="text-3xl font-bold leading-none"
+                style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
+              <span className="text-xs font-medium leading-snug"
+                style={{ color: "rgba(255,248,232,0.7)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Steps 03–07 — highlighted group */}
+        <div className="relative mt-0" style={{ border: "1px solid rgba(255,117,24,0.35)", borderTop: "none" }}>
+          {/* "Most roofers skip these" badge */}
+          <div className="flex items-center gap-2 px-4 py-2"
+            style={{ backgroundColor: "rgba(255,117,24,0.12)", borderBottom: "1px solid rgba(255,117,24,0.25)" }}>
+            <span className="text-xs font-semibold uppercase tracking-widest"
+              style={{ color: "#FF7518", fontFamily: "var(--font-sora)", letterSpacing: "0.12em" }}>
+              ⚠ Most roofers skip these 5 steps
+            </span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px">
+            {steps.slice(2, 7).map((step, i) => (
+              <motion.div
+                key={step.num}
+                initial={{ opacity: 0, y: 24 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: (i + 2) * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="p-5 flex flex-col gap-2 group transition-colors duration-200"
+                style={{
+                  backgroundColor: "rgba(255,117,24,0.06)",
+                  borderRight: "1px solid rgba(255,117,24,0.15)",
+                  borderBottom: "1px solid rgba(255,117,24,0.15)",
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(255,117,24,0.12)"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(255,117,24,0.06)"; }}
               >
-                {step.num}
-              </span>
-              <span
-                className="text-xs font-medium leading-snug"
-                style={{ color: "rgba(255,248,232,0.7)", fontFamily: "var(--font-sora)" }}
-              >
-                {step.label}
-              </span>
+                <span className="text-3xl font-bold leading-none"
+                  style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
+                <span className="text-xs font-medium leading-snug"
+                  style={{ color: "rgba(255,248,232,0.85)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
+                <span className="text-xs font-semibold self-start px-1.5 py-0.5 rounded-sm"
+                  style={{
+                    backgroundColor: "rgba(255,117,24,0.18)",
+                    border: "1px solid rgba(255,117,24,0.35)",
+                    color: "#FF7518",
+                    fontFamily: "var(--font-sora)",
+                    fontSize: "10px",
+                    letterSpacing: "0.04em",
+                  }}>
+                  Often skipped
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Steps 08–13 + final card */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px"
+          style={{ border: "1px solid rgba(255,117,24,0.15)", borderTop: "none" }}>
+          {steps.slice(7).map((step, i) => (
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: (i + 7) * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="p-5 flex flex-col gap-2 group transition-colors duration-200"
+              style={{
+                backgroundColor: "#141118",
+                borderRight: "1px solid rgba(255,117,24,0.1)",
+                borderBottom: "1px solid rgba(255,117,24,0.1)",
+              }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#141118"; }}
+            >
+              <span className="text-3xl font-bold leading-none"
+                style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
+              <span className="text-xs font-medium leading-snug"
+                style={{ color: "rgba(255,248,232,0.7)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
             </motion.div>
           ))}
           {/* Final "included" card */}
@@ -112,16 +172,12 @@ export default function Process() {
               borderBottom: "1px solid rgba(255,117,24,0.1)",
             }}
           >
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(255,253,248,0.7)", fontFamily: "var(--font-sora)", letterSpacing: "0.1em" }}
-            >
+            <span className="text-xs font-semibold uppercase tracking-widest"
+              style={{ color: "rgba(255,253,248,0.7)", fontFamily: "var(--font-sora)", letterSpacing: "0.1em" }}>
               Every Job
             </span>
-            <span
-              className="text-sm font-bold leading-snug"
-              style={{ color: "#FFFDF8", fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }}
-            >
+            <span className="text-sm font-bold leading-snug"
+              style={{ color: "#FFFDF8", fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }}>
               All 13 steps. No exceptions.
             </span>
           </motion.div>

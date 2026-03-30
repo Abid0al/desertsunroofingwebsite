@@ -31,22 +31,31 @@ export default function Footer() {
               Family-owned flat roof specialists serving Tucson since 2007.
               Owner Jeremiah Nidey on every job.
             </p>
-            {/* Social icons placeholder */}
+            {/* Google Business Profile link */}
             <div className="flex gap-3">
-              {["FB", "G+", "ND"].map((s) => (
-                <div
-                  key={s}
-                  className="w-8 h-8 rounded-sm flex items-center justify-center text-xs font-semibold"
-                  style={{
-                    backgroundColor: "rgba(255,117,24,0.1)",
-                    border: "1px solid rgba(255,117,24,0.2)",
-                    color: "rgba(255,248,232,0.5)",
-                    fontFamily: "var(--font-sora)",
-                  }}
-                >
-                  {s}
-                </div>
-              ))}
+              <a
+                href="https://www.google.com/maps/place/Desert+Sun+Roofing+%26+Reflective+Coatings"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Desert Sun Roofing on Google Maps"
+                className="w-8 h-8 rounded-sm flex items-center justify-center text-xs font-bold transition-all duration-150"
+                style={{
+                  backgroundColor: "rgba(255,117,24,0.1)",
+                  border: "1px solid rgba(255,117,24,0.2)",
+                  color: "rgba(255,248,232,0.6)",
+                  fontFamily: "var(--font-sora)",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,117,24,0.2)";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "#FF7518";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,117,24,0.1)";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,248,232,0.6)";
+                }}
+              >
+                G{/* TODO: replace with direct GBP URL from client */}
+              </a>
             </div>
           </div>
 

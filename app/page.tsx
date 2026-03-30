@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import StormUrgencyBanner from "@/components/StormUrgencyBanner";
 import TrustBar from "@/components/sections/TrustBar";
 import Partners from "@/components/sections/Partners";
 import Services from "@/components/sections/Services";
@@ -18,6 +19,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <StormUrgencyBanner />
       <TrustBar />
       <Partners />
       <Services />

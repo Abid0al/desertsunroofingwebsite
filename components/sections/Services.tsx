@@ -2,9 +2,17 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Droplets, Zap, RefreshCw, Wrench, Sun } from "lucide-react";
+import { Droplets, Zap, RefreshCw, Wrench, Sun, AlertTriangle } from "lucide-react";
 
 const services = [
+  {
+    num: "00",
+    icon: AlertTriangle,
+    problem: "Damage from last night's storm?",
+    service: "Emergency Roof Response",
+    desc: "Same-day assessment for storm, monsoon, or wind damage. Jeremiah responds 7 days a week — we stop the damage before it spreads.",
+    urgent: true,
+  },
   {
     num: "01",
     icon: Droplets,
@@ -25,6 +33,7 @@ const services = [
     problem: "Thinking you need a full replacement?",
     service: "Roof Restoration Systems",
     desc: "Hand-applied poly-membrane restoration saves homeowners thousands compared to a full tear-off.",
+    financing: true,
   },
   {
     num: "04",
@@ -103,6 +112,9 @@ export default function Services() {
                 backgroundColor: "#FFFBF2",
                 boxShadow: "0 2px 8px rgba(20,17,24,0.08), 0 8px 24px rgba(255,117,24,0.06)",
                 transition: "box-shadow 0.25s ease",
+                borderLeft: (svc as typeof svc & { urgent?: boolean }).urgent
+                  ? "3px solid #DC2626"
+                  : undefined,
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
@@ -113,29 +125,59 @@ export default function Services() {
                   "0 2px 8px rgba(20,17,24,0.08), 0 8px 24px rgba(255,117,24,0.06)";
               }}
             >
-              {/* Number accent */}
-              <span
-                className="absolute top-5 right-6 text-5xl font-bold leading-none select-none"
-                style={{
-                  fontFamily: "var(--font-cormorant)",
-                  color: "rgba(255,117,24,0.08)",
-                }}
-              >
-                {svc.num}
-              </span>
+              {/* Urgent badge */}
+              {(svc as typeof svc & { urgent?: boolean }).urgent && (
+                <span
+                  className="absolute top-4 right-5 text-xs font-semibold px-2 py-0.5 rounded-sm"
+                  style={{
+                    backgroundColor: "rgba(220,38,38,0.1)",
+                    border: "1px solid rgba(220,38,38,0.3)",
+                    color: "#DC2626",
+                    fontFamily: "var(--font-sora)",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Same-Day Response
+                </span>
+              )}
+
+              {/* Number accent (hide for urgent card) */}
+              {!(svc as typeof svc & { urgent?: boolean }).urgent && (
+                <span
+                  className="absolute top-5 right-6 text-5xl font-bold leading-none select-none"
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    color: "rgba(255,117,24,0.08)",
+                  }}
+                >
+                  {svc.num}
+                </span>
+              )}
 
               {/* Icon */}
               <div
                 className="w-10 h-10 rounded-sm flex items-center justify-center"
-                style={{ backgroundColor: "rgba(255,117,24,0.1)" }}
+                style={{
+                  backgroundColor: (svc as typeof svc & { urgent?: boolean }).urgent
+                    ? "rgba(220,38,38,0.1)"
+                    : "rgba(255,117,24,0.1)",
+                }}
               >
-                <svc.icon size={20} style={{ color: "#FF7518" }} />
+                <svc.icon
+                  size={20}
+                  style={{
+                    color: (svc as typeof svc & { urgent?: boolean }).urgent ? "#DC2626" : "#FF7518",
+                  }}
+                />
               </div>
 
               {/* Problem question */}
               <p
                 className="text-sm font-semibold"
-                style={{ color: "#FF7518", fontFamily: "var(--font-sora)" }}
+                style={{
+                  color: (svc as typeof svc & { urgent?: boolean }).urgent ? "#DC2626" : "#FF7518",
+                  fontFamily: "var(--font-sora)",
+                }}
               >
                 {svc.problem}
               </p>
@@ -159,6 +201,22 @@ export default function Services() {
               >
                 {svc.desc}
               </p>
+
+              {/* Financing badge */}
+              {(svc as typeof svc & { financing?: boolean }).financing && (
+                <span
+                  className="self-start text-xs font-semibold px-2.5 py-1 rounded-sm"
+                  style={{
+                    backgroundColor: "rgba(255,117,24,0.12)",
+                    border: "1px solid rgba(255,117,24,0.3)",
+                    color: "#FF7518",
+                    fontFamily: "var(--font-sora)",
+                    fontSize: "11px",
+                  }}
+                >
+                  Financing available
+                </span>
+              )}
             </motion.div>
           ))}
 

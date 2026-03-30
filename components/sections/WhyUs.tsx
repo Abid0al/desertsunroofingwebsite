@@ -57,36 +57,12 @@ export default function WhyUs() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Left — all content */}
         <div className="flex-1 py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
-          {/* Pull quote */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-16 lg:mb-20"
-          >
-            <blockquote
-              className="max-w-2xl"
-              style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(20px, 2.8vw, 36px)",
-                fontStyle: "italic",
-                color: "rgba(255,248,232,0.6)",
-                lineHeight: 1.4,
-                borderLeft: "3px solid #FF7518",
-                paddingLeft: "1.5rem",
-              }}
-            >
-              &ldquo;We have never received a negative review or had an AZ ROC complaint filed —
-              a claim very few roofing companies in Arizona can make.&rdquo;
-            </blockquote>
-          </motion.div>
-
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-12"
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-10"
           >
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-3"
@@ -108,6 +84,41 @@ export default function WhyUs() {
               <br />
               <em style={{ color: "#FF7518" }}>Choose Us</em>
             </h2>
+          </motion.div>
+
+          {/* Featured quote — anchored below heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-14"
+          >
+            <blockquote
+              className="max-w-2xl"
+              style={{
+                borderLeft: "3px solid #FF7518",
+                paddingLeft: "1.5rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-cormorant)",
+                  fontSize: "clamp(20px, 2.8vw, 34px)",
+                  fontStyle: "italic",
+                  color: "rgba(255,248,232,0.85)",
+                  lineHeight: 1.4,
+                }}
+              >
+                &ldquo;We have never received a negative review or had an AZ ROC complaint filed —
+                a claim very few roofing companies in Arizona can make.&rdquo;
+              </p>
+              <cite
+                className="not-italic block mt-3 text-sm"
+                style={{ color: "rgba(255,248,232,0.45)", fontFamily: "var(--font-sora)" }}
+              >
+                — Jeremiah Nidey, Owner &amp; Founder
+              </cite>
+            </blockquote>
           </motion.div>
 
           {/* 2×2 grid */}

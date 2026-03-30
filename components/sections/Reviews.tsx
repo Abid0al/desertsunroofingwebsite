@@ -90,7 +90,7 @@ export default function Reviews() {
                 100% 5-star reviews. No negative reviews. <strong>Ever.</strong>
               </p>
               <a
-                href="https://www.google.com/maps/search/Desert+Sun+Roofing+Tucson"
+                href="https://www.google.com/maps/place/Desert+Sun+Roofing+%26+Reflective+Coatings" /* TODO: swap for direct GBP place URL from client */
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-sm self-start transition-all duration-200"
@@ -154,6 +154,12 @@ export default function Reviews() {
                     style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                   >
                     {r.area}
+                  </p>
+                  <p
+                    className="text-xs mt-1"
+                    style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", fontSize: "11px" }}
+                  >
+                    ★★★★★&nbsp;&nbsp;Verified Google Review
                   </p>
                 </div>
                 <span

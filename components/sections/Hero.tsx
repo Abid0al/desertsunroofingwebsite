@@ -95,7 +95,7 @@ export default function Hero() {
                   letterSpacing: "0.15em",
                 }}
               >
-                ✦ Tucson&apos;s Flat Roof Specialists
+                ✦ Tucson&apos;s Flat Roof Specialists — Monsoon Season Ready
               </span>
             </motion.div>
 
@@ -115,12 +115,11 @@ export default function Hero() {
                 lineHeight: 1.0,
               }}
             >
-              Owner On{" "}
+              No Leaks. No Subcontractors.{" "}
               <span style={{ fontStyle: "italic", color: "#FF7518" }}>
-                Every Job
+                Jeremiah
               </span>
-              {" "}—
-              <span style={{ display: "block" }}>Since 2007.</span>
+              <span style={{ display: "block" }}>On Every Job.</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -136,8 +135,9 @@ export default function Hero() {
                 lineHeight: 1.7,
               }}
             >
-              Jeremiah Nidey personally supervises every project. No subcontractors,
-              no day laborers — just our in-house crew doing the job right the first time.
+              Most Tucson homeowners have been burned by a crew that sent strangers, cut
+              corners, and disappeared. Desert Sun is the exception — same crew, same owner,
+              same standard, every time.
             </motion.p>
 
             {/* CTAs */}
@@ -192,7 +192,7 @@ export default function Hero() {
                   el.style.color = "#FFFDF8";
                 }}
               >
-                See Our Work
+                See How We Saved One Homeowner $11,000 →
               </button>
             </motion.div>
 
@@ -204,7 +204,7 @@ export default function Hero() {
               variants={fadeUp}
               className="flex flex-wrap items-center gap-4 pt-2"
             >
-              {["⭐ 5.0 Google", "BBB A+", "ROC Licensed", "18 Years in Tucson"].map((item, i) => (
+              {["⭐ 5.0 Google (100+ Reviews)", "BBB A+ Since 2007", "ROC Licensed #229958", "500+ Tucson Roofs Completed"].map((item, i) => (
                 <span
                   key={i}
                   className="text-xs font-medium"
@@ -246,14 +246,14 @@ export default function Hero() {
                   className="text-2xl font-bold leading-tight"
                   style={{ fontFamily: "var(--font-cormorant)", color: "#FFFDF8", fontSize: "1.6rem" }}
                 >
-                  &ldquo;Owner on every job. No exceptions.&rdquo;
+                  &ldquo;18 years. 500+ Tucson roofs. Not one unresolved complaint.&rdquo;
                 </p>
               </div>
               <ul className="flex flex-col gap-3">
                 {[
-                  "No subcontractors — ever",
-                  "Hand-applied coatings, never sprayed",
-                  "BBB A+ · 5.0 Google · Zero ROC complaints",
+                  "The crew you meet is the crew that does the work",
+                  "13-step hand application — coatings that last 10–15 years",
+                  "500+ Tucson roofs. Zero ROC complaints. Ever.",
                 ].map((b) => (
                   <li key={b} className="flex items-start gap-2.5">
                     <span style={{ color: "#FF7518", flexShrink: 0, marginTop: "3px" }}>✓</span>

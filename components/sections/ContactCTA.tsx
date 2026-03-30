@@ -110,6 +110,12 @@ export default function ContactCTA() {
             No obligation. No pressure. Jeremiah will personally assess
             your roof and give you an honest evaluation.
           </p>
+          <p
+            className="mt-4 text-sm"
+            style={{ color: "rgba(255,248,232,0.45)", fontFamily: "var(--font-sora)" }}
+          >
+            💳 Financing available — ask Jeremiah about flexible payment options during your inspection.
+          </p>
         </motion.div>
 
         {/* Two-column layout */}
@@ -166,29 +172,6 @@ export default function ContactCTA() {
                   placeholder="(520) 000-0000"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-4 py-3 rounded-sm text-sm outline-none transition-all duration-200"
-                  style={{
-                    backgroundColor: "rgba(255,248,232,0.05)",
-                    border: "1px solid rgba(255,248,232,0.1)",
-                    color: "#FFFDF8",
-                    fontFamily: "var(--font-sora)",
-                  }}
-                  onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(255,117,24,0.4)")}
-                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,248,232,0.1)")}
-                />
-              </div>
-
-              {/* Address */}
-              <div className="flex flex-col gap-2">
-                <label
-                  className="text-sm font-medium"
-                  style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)" }}
-                >
-                  Property Address
-                </label>
-                <input
-                  type="text"
-                  placeholder="123 Main St, Tucson, AZ"
                   className="w-full px-4 py-3 rounded-sm text-sm outline-none transition-all duration-200"
                   style={{
                     backgroundColor: "rgba(255,248,232,0.05)",

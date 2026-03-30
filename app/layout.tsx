@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Sora } from "next/font/google";
 import "./globals.css";
+import MobileStickyCall from "@/components/MobileStickyCall";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -35,6 +36,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-sora), system-ui, sans-serif" }}
       >
         {children}
+        <MobileStickyCall />
       </body>
     </html>
   );
