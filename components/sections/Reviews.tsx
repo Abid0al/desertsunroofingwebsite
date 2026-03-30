@@ -90,7 +90,7 @@ export default function Reviews() {
                 100% 5-star reviews. No negative reviews. <strong>Ever.</strong>
               </p>
               <a
-                href="https://www.google.com/maps/place/Desert+Sun+Roofing+%26+Reflective+Coatings" /* TODO: swap for direct GBP place URL from client */
+                href="https://g.page/r/CbDgfOORbB_WEBM/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-sm self-start transition-all duration-200"

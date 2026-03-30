@@ -34,7 +34,7 @@ export default function Footer() {
             {/* Google Business Profile link */}
             <div className="flex gap-3">
               <a
-                href="https://www.google.com/maps/place/Desert+Sun+Roofing+%26+Reflective+Coatings"
+                href="https://g.page/r/CbDgfOORbB_WEBM/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Desert Sun Roofing on Google Maps"
