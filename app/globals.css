@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background-color: #141118;
-  color: #FFFDF8;
+  background-color: #FFFDF8;
+  color: #141118;
   font-family: var(--font-sora), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,5 +50,5 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #141118; }
+::-webkit-scrollbar-track { background: #FFFDF8; }
 ::-webkit-scrollbar-thumb { background: #FF7518; border-radius: 3px; }

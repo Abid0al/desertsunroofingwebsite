@@ -28,7 +28,7 @@ export default function Process() {
       id="process"
       ref={ref}
       className="py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#1A1628" }}
+      style={{ backgroundColor: "#FFFDF8" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
@@ -50,7 +50,7 @@ export default function Process() {
               fontFamily: "var(--font-cormorant)",
               fontSize: "clamp(32px, 4.5vw, 56px)",
               fontWeight: 700,
-              color: "#FFFDF8",
+              color: "#141118",
               letterSpacing: "-0.02em",
             }}
           >
@@ -58,7 +58,7 @@ export default function Process() {
           </h2>
           <p
             className="text-base max-w-lg"
-            style={{ color: "rgba(255,248,232,0.55)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+            style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
           >
             Not every roofer does it this way. Most skip steps 3–7.
           </p>
@@ -66,7 +66,7 @@ export default function Process() {
 
         {/* Steps grid — steps 01–02 */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px"
-          style={{ border: "1px solid rgba(255,117,24,0.15)", marginBottom: "0" }}>
+          style={{ border: "1px solid rgba(20,17,24,0.1)", marginBottom: "0" }}>
           {steps.slice(0, 2).map((step, i) => (
             <motion.div
               key={step.num}
@@ -75,17 +75,17 @@ export default function Process() {
               transition={{ delay: i * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="p-5 flex flex-col gap-2 group transition-colors duration-200"
               style={{
-                backgroundColor: "#141118",
-                borderRight: "1px solid rgba(255,117,24,0.1)",
-                borderBottom: "1px solid rgba(255,117,24,0.1)",
+                backgroundColor: "#FFFBF2",
+                borderRight: "1px solid rgba(20,17,24,0.08)",
+                borderBottom: "1px solid rgba(20,17,24,0.08)",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#141118"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFF3DC"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFFBF2"; }}
             >
               <span className="text-3xl font-bold leading-none"
                 style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
               <span className="text-xs font-medium leading-snug"
-                style={{ color: "rgba(255,248,232,0.7)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
+                style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}>{step.label}</span>
             </motion.div>
           ))}
         </div>
@@ -119,7 +119,7 @@ export default function Process() {
                 <span className="text-3xl font-bold leading-none"
                   style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
                 <span className="text-xs font-medium leading-snug"
-                  style={{ color: "rgba(255,248,232,0.85)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
+                  style={{ color: "#141118", fontFamily: "var(--font-sora)" }}>{step.label}</span>
                 <span className="text-xs font-semibold self-start px-1.5 py-0.5 rounded-sm"
                   style={{
                     backgroundColor: "rgba(255,117,24,0.18)",
@@ -138,7 +138,7 @@ export default function Process() {
 
         {/* Steps 08–13 + final card */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px"
-          style={{ border: "1px solid rgba(255,117,24,0.15)", borderTop: "none" }}>
+          style={{ border: "1px solid rgba(20,17,24,0.1)", borderTop: "none" }}>
           {steps.slice(7).map((step, i) => (
             <motion.div
               key={step.num}
@@ -147,17 +147,17 @@ export default function Process() {
               transition={{ delay: (i + 7) * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="p-5 flex flex-col gap-2 group transition-colors duration-200"
               style={{
-                backgroundColor: "#141118",
-                borderRight: "1px solid rgba(255,117,24,0.1)",
-                borderBottom: "1px solid rgba(255,117,24,0.1)",
+                backgroundColor: "#FFFBF2",
+                borderRight: "1px solid rgba(20,17,24,0.08)",
+                borderBottom: "1px solid rgba(20,17,24,0.08)",
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#141118"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFF3DC"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFFBF2"; }}
             >
               <span className="text-3xl font-bold leading-none"
                 style={{ fontFamily: "var(--font-cormorant)", color: "#FF7518" }}>{step.num}</span>
               <span className="text-xs font-medium leading-snug"
-                style={{ color: "rgba(255,248,232,0.7)", fontFamily: "var(--font-sora)" }}>{step.label}</span>
+                style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}>{step.label}</span>
             </motion.div>
           ))}
           {/* Final "included" card */}
@@ -189,7 +189,7 @@ export default function Process() {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6, duration: 0.5 }}
           className="mt-6 text-xs text-center"
-          style={{ color: "rgba(255,248,232,0.35)", fontFamily: "var(--font-sora)" }}
+          style={{ color: "rgba(20,17,24,0.35)", fontFamily: "var(--font-sora)" }}
         >
           Using Tucson Rubberized Coatings #7000 &amp; #10000 — manufactured locally for Arizona&apos;s desert climate
         </motion.p>

@@ -32,8 +32,8 @@ export default function Navbar() {
       <motion.header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          backgroundColor: scrolled ? "#141118" : "transparent",
-          boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.4)" : "none",
+          backgroundColor: scrolled ? "#FFFDF8" : "transparent",
+          boxShadow: scrolled ? "0 2px 20px rgba(20,17,24,0.08)" : "none",
           backdropFilter: scrolled ? "blur(0px)" : "blur(8px)",
         }}
         initial={{ y: -80, opacity: 0 }}
@@ -65,13 +65,13 @@ export default function Navbar() {
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
                   className="text-sm font-medium transition-colors duration-200 cursor-pointer"
-                  style={{ color: "#FFFDF8", opacity: 0.8, fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#141118", opacity: 0.8, fontFamily: "var(--font-sora)" }}
                   onMouseEnter={(e) => {
                     (e.target as HTMLButtonElement).style.color = "#FF7518";
                     (e.target as HTMLButtonElement).style.opacity = "1";
                   }}
                   onMouseLeave={(e) => {
-                    (e.target as HTMLButtonElement).style.color = "#FFFDF8";
+                    (e.target as HTMLButtonElement).style.color = "#141118";
                     (e.target as HTMLButtonElement).style.opacity = "0.8";
                   }}
                 >
@@ -86,8 +86,8 @@ export default function Navbar() {
                 href="tel:5203701039"
                 className="flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full border transition-all duration-200"
                 style={{
-                  color: "#FFFDF8",
-                  borderColor: "rgba(255,253,248,0.2)",
+                  color: "#141118",
+                  borderColor: "rgba(20,17,24,0.2)",
                   fontFamily: "var(--font-sora)",
                 }}
                 onMouseEnter={(e) => {
@@ -97,8 +97,8 @@ export default function Navbar() {
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
-                  el.style.borderColor = "rgba(255,253,248,0.2)";
-                  el.style.color = "#FFFDF8";
+                  el.style.borderColor = "rgba(20,17,24,0.2)";
+                  el.style.color = "#141118";
                 }}
               >
                 <Phone size={14} />
@@ -127,7 +127,7 @@ export default function Navbar() {
             {/* Mobile hamburger */}
             <button
               className="lg:hidden p-2 rounded-sm"
-              style={{ color: "#FFFDF8" }}
+              style={{ color: "#141118" }}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -149,7 +149,7 @@ export default function Navbar() {
           >
             <div
               className="absolute inset-0"
-              style={{ backgroundColor: "rgba(20,17,24,0.95)" }}
+              style={{ backgroundColor: "rgba(20,17,24,0.4)" }}
               onClick={() => setMenuOpen(false)}
             />
             <motion.nav
@@ -158,7 +158,7 @@ export default function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              style={{ backgroundColor: "#1E1929" }}
+              style={{ backgroundColor: "#FFFDF8" }}
             >
               {navLinks.map((link) => (
                 <button
@@ -166,8 +166,8 @@ export default function Navbar() {
                   onClick={() => handleNavClick(link.href)}
                   className="text-left text-xl font-medium py-2 border-b cursor-pointer"
                   style={{
-                    color: "#FFFDF8",
-                    borderColor: "rgba(255,253,248,0.1)",
+                    color: "#141118",
+                    borderColor: "rgba(20,17,24,0.1)",
                     fontFamily: "var(--font-sora)",
                   }}
                 >

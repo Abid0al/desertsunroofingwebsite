@@ -54,16 +54,16 @@ export default function ContactCTA() {
       id="contact"
       ref={ref}
       className="grain-overlay relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#141118" }}
+      style={{ backgroundColor: "#FFF8E8" }}
     >
       {/* Atmospheric glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,117,24,0.22) 0%, transparent 65%),
-            radial-gradient(ellipse 50% 40% at 80% 15%, rgba(127,0,255,0.18) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 30% at 15% 20%, rgba(127,0,255,0.08) 0%, transparent 55%)
+            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,117,24,0.08) 0%, transparent 65%),
+            radial-gradient(ellipse 50% 40% at 80% 15%, rgba(127,0,255,0.05) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 30% at 15% 20%, rgba(127,0,255,0.03) 0%, transparent 55%)
           `,
         }}
       />
@@ -95,7 +95,7 @@ export default function ContactCTA() {
               fontFamily: "var(--font-cormorant)",
               fontSize: "clamp(36px, 5vw, 64px)",
               fontWeight: 700,
-              color: "#FFFDF8",
+              color: "#141118",
               letterSpacing: "-0.02em",
               lineHeight: 1.05,
             }}
@@ -105,14 +105,14 @@ export default function ContactCTA() {
           </h2>
           <p
             className="text-base max-w-md mx-auto"
-            style={{ color: "rgba(255,248,232,0.55)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+            style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
           >
             No obligation. No pressure. Jeremiah will personally assess
             your roof and give you an honest evaluation.
           </p>
           <p
             className="mt-4 text-sm"
-            style={{ color: "rgba(255,248,232,0.45)", fontFamily: "var(--font-sora)" }}
+            style={{ color: "rgba(20,17,24,0.45)", fontFamily: "var(--font-sora)" }}
           >
             💳 Financing available — ask Jeremiah about flexible payment options during your inspection.
           </p>
@@ -128,9 +128,9 @@ export default function ContactCTA() {
             transition={{ delay: 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="p-8 rounded-sm"
             style={{
-              backgroundColor: "#1A1628",
-              border: "1px solid rgba(255,117,24,0.12)",
-              boxShadow: "0 8px 40px rgba(20,17,24,0.4)",
+              backgroundColor: "#FFFBF2",
+              border: "1px solid rgba(20,17,24,0.1)",
+              boxShadow: "0 8px 40px rgba(20,17,24,0.08)",
             }}
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -138,7 +138,7 @@ export default function ContactCTA() {
               <div className="flex flex-col gap-2">
                 <label
                   className="text-sm font-medium"
-                  style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "rgba(20,17,24,0.75)", fontFamily: "var(--font-sora)" }}
                 >
                   Your Name
                 </label>
@@ -149,13 +149,13 @@ export default function ContactCTA() {
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 rounded-sm text-sm outline-none transition-all duration-200"
                   style={{
-                    backgroundColor: "rgba(255,248,232,0.05)",
-                    border: "1px solid rgba(255,248,232,0.1)",
-                    color: "#FFFDF8",
+                    backgroundColor: "rgba(20,17,24,0.03)",
+                    border: "1px solid rgba(20,17,24,0.12)",
+                    color: "#141118",
                     fontFamily: "var(--font-sora)",
                   }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(255,117,24,0.4)")}
-                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,248,232,0.1)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(20,17,24,0.12)")}
                 />
               </div>
 
@@ -163,7 +163,7 @@ export default function ContactCTA() {
               <div className="flex flex-col gap-2">
                 <label
                   className="text-sm font-medium"
-                  style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "rgba(20,17,24,0.75)", fontFamily: "var(--font-sora)" }}
                 >
                   Phone Number
                 </label>
@@ -174,13 +174,13 @@ export default function ContactCTA() {
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-4 py-3 rounded-sm text-sm outline-none transition-all duration-200"
                   style={{
-                    backgroundColor: "rgba(255,248,232,0.05)",
-                    border: "1px solid rgba(255,248,232,0.1)",
-                    color: "#FFFDF8",
+                    backgroundColor: "rgba(20,17,24,0.03)",
+                    border: "1px solid rgba(20,17,24,0.12)",
+                    color: "#141118",
                     fontFamily: "var(--font-sora)",
                   }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(255,117,24,0.4)")}
-                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,248,232,0.1)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(20,17,24,0.12)")}
                 />
               </div>
 
@@ -188,10 +188,10 @@ export default function ContactCTA() {
               <div className="flex flex-col gap-2">
                 <label
                   className="text-sm font-medium"
-                  style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "rgba(20,17,24,0.75)", fontFamily: "var(--font-sora)" }}
                 >
                   Describe your roof issue{" "}
-                  <span style={{ color: "rgba(255,248,232,0.4)", fontWeight: 400 }}>(optional)</span>
+                  <span style={{ color: "rgba(20,17,24,0.4)", fontWeight: 400 }}>(optional)</span>
                 </label>
                 <textarea
                   placeholder="e.g. flat roof leak after monsoon, need coating, looking for an estimate..."
@@ -200,14 +200,14 @@ export default function ContactCTA() {
                   onChange={(e) => setIssue(e.target.value)}
                   className="w-full px-4 py-3 rounded-sm text-sm outline-none transition-all duration-200 resize-none"
                   style={{
-                    backgroundColor: "rgba(255,248,232,0.05)",
-                    border: "1px solid rgba(255,248,232,0.1)",
-                    color: "#FFFDF8",
+                    backgroundColor: "rgba(20,17,24,0.03)",
+                    border: "1px solid rgba(20,17,24,0.12)",
+                    color: "#141118",
                     fontFamily: "var(--font-sora)",
                     lineHeight: 1.6,
                   }}
                   onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(255,117,24,0.4)")}
-                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,248,232,0.1)")}
+                  onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(20,17,24,0.12)")}
                 />
               </div>
 
@@ -236,7 +236,7 @@ export default function ContactCTA() {
 
               <p
                 className="text-xs text-center"
-                style={{ color: "rgba(255,248,232,0.35)", fontFamily: "var(--font-sora)" }}
+                style={{ color: "rgba(20,17,24,0.35)", fontFamily: "var(--font-sora)" }}
               >
                 No spam. No obligation. Jeremiah will respond personally.
               </p>
@@ -253,8 +253,8 @@ export default function ContactCTA() {
                 transition={{ delay: 0.15 + i * 0.07, duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
                 className="flex items-start gap-4 p-5 rounded-sm"
                 style={{
-                  backgroundColor: "#1A1628",
-                  border: "1px solid rgba(255,248,232,0.07)",
+                  backgroundColor: "#FFFBF2",
+                  border: "1px solid rgba(20,17,24,0.08)",
                 }}
               >
                 <div
@@ -269,7 +269,7 @@ export default function ContactCTA() {
                 <div className="min-w-0">
                   <p
                     className="text-xs font-medium mb-1"
-                    style={{ color: "rgba(255,248,232,0.4)", fontFamily: "var(--font-sora)" }}
+                    style={{ color: "rgba(20,17,24,0.4)", fontFamily: "var(--font-sora)" }}
                   >
                     {card.label}
                   </p>
@@ -279,9 +279,9 @@ export default function ContactCTA() {
                       target={card.href.startsWith("http") ? "_blank" : undefined}
                       rel={card.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="text-sm font-medium transition-colors duration-150 break-all"
-                      style={{ color: "#FFFDF8", fontFamily: "var(--font-sora)" }}
+                      style={{ color: "#141118", fontFamily: "var(--font-sora)" }}
                       onMouseEnter={(e) => (e.currentTarget.style.color = "#FF7518")}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = "#FFFDF8")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#141118")}
                     >
                       {card.value}
                     </a>
@@ -289,7 +289,7 @@ export default function ContactCTA() {
                     <p
                       className="text-sm font-medium"
                       style={{
-                        color: "#FFFDF8",
+                        color: "#141118",
                         fontFamily: "var(--font-sora)",
                         whiteSpace: "pre-line",
                         lineHeight: 1.6,

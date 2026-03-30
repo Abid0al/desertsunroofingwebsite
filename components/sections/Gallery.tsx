@@ -47,8 +47,8 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
       transition={{ delay, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="rounded-sm overflow-hidden"
       style={{
-        backgroundColor: "#1E1929",
-        boxShadow: "0 4px 16px rgba(20,17,24,0.25)",
+        backgroundColor: "#FFFBF2",
+        boxShadow: "0 4px 16px rgba(20,17,24,0.08)",
       }}
     >
       {/* Image area */}
@@ -76,7 +76,7 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
               className="text-xs font-semibold px-3 py-1 rounded-sm capitalize transition-all duration-200 cursor-pointer"
               style={{
                 backgroundColor: showing === tab ? "#FF7518" : "rgba(20,17,24,0.75)",
-                color: "#FFFDF8",
+                color: "#141118",
                 fontFamily: "var(--font-sora)",
                 backdropFilter: "blur(4px)",
               }}
@@ -92,7 +92,7 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
         <div className="flex items-start justify-between gap-4 mb-2">
           <h3
             className="text-lg font-bold"
-            style={{ fontFamily: "var(--font-cormorant)", color: "#FFFDF8", fontSize: "1.2rem" }}
+            style={{ fontFamily: "var(--font-cormorant)", color: "#141118", fontSize: "1.2rem" }}
           >
             {project.type}
           </h3>
@@ -110,7 +110,7 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
         </div>
         <p
           className="text-sm"
-          style={{ color: "rgba(255,248,232,0.6)", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
+          style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
         >
           {project.outcome}
         </p>
@@ -128,7 +128,7 @@ export default function Gallery() {
       id="gallery"
       ref={ref}
       className="py-24 lg:py-32"
-      style={{ backgroundColor: "#141118" }}
+      style={{ backgroundColor: "#FFF8E8" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
@@ -150,7 +150,7 @@ export default function Gallery() {
               fontFamily: "var(--font-cormorant)",
               fontSize: "clamp(32px, 4.5vw, 56px)",
               fontWeight: 700,
-              color: "#FFFDF8",
+              color: "#141118",
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
             }}

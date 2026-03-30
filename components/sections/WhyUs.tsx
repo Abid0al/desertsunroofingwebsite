@@ -36,7 +36,7 @@ export default function WhyUs() {
       id="why"
       ref={ref}
       className="relative overflow-hidden"
-      style={{ backgroundColor: "#141118" }}
+      style={{ backgroundColor: "#FFF8E8" }}
     >
       {/* Background image */}
       <img
@@ -46,11 +46,11 @@ export default function WhyUs() {
         className="absolute inset-0 w-full h-full"
         style={{ objectFit: "cover", objectPosition: "center 40%" }}
       />
-      {/* Dark overlay for readability */}
+      {/* Light overlay for readability */}
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, rgba(20,17,24,0.92) 0%, rgba(20,17,24,0.80) 60%, rgba(20,17,24,0.65) 100%)",
+          background: "linear-gradient(135deg, rgba(255,248,232,0.94) 0%, rgba(255,248,232,0.88) 60%, rgba(255,248,232,0.80) 100%)",
         }}
       />
 
@@ -75,7 +75,7 @@ export default function WhyUs() {
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(32px, 4vw, 52px)",
                 fontWeight: 700,
-                color: "#FFFDF8",
+                color: "#141118",
                 letterSpacing: "-0.02em",
                 lineHeight: 1.1,
               }}
@@ -105,7 +105,7 @@ export default function WhyUs() {
                   fontFamily: "var(--font-cormorant)",
                   fontSize: "clamp(20px, 2.8vw, 34px)",
                   fontStyle: "italic",
-                  color: "rgba(255,248,232,0.85)",
+                  color: "rgba(20,17,24,0.80)",
                   lineHeight: 1.4,
                 }}
               >
@@ -114,7 +114,7 @@ export default function WhyUs() {
               </p>
               <cite
                 className="not-italic block mt-3 text-sm"
-                style={{ color: "rgba(255,248,232,0.45)", fontFamily: "var(--font-sora)" }}
+                style={{ color: "rgba(20,17,24,0.45)", fontFamily: "var(--font-sora)" }}
               >
                 — Jeremiah Nidey, Owner &amp; Founder
               </cite>
@@ -122,7 +122,7 @@ export default function WhyUs() {
           </motion.div>
 
           {/* 2×2 grid */}
-          <div className="grid sm:grid-cols-2 gap-px" style={{ border: "1px solid rgba(255,117,24,0.15)" }}>
+          <div className="grid sm:grid-cols-2 gap-px" style={{ border: "1px solid rgba(20,17,24,0.08)" }}>
             {differentiators.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -131,15 +131,15 @@ export default function WhyUs() {
                 transition={{ delay: 0.15 + i * 0.09, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="group p-7 lg:p-8 flex flex-col gap-4 transition-colors duration-300"
                 style={{
-                  backgroundColor: "#1E1929",
-                  borderRight: i % 2 === 0 ? "1px solid rgba(255,117,24,0.15)" : "none",
-                  borderBottom: i < 2 ? "1px solid rgba(255,117,24,0.15)" : "none",
+                  backgroundColor: "rgba(255,253,248,0.85)",
+                  borderRight: i % 2 === 0 ? "1px solid rgba(20,17,24,0.08)" : "none",
+                  borderBottom: i < 2 ? "1px solid rgba(20,17,24,0.08)" : "none",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "#251E35";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(255,253,248,0.95)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "#1E1929";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(255,253,248,0.85)";
                 }}
               >
                 <div
@@ -153,7 +153,7 @@ export default function WhyUs() {
                     className="font-bold mb-2"
                     style={{
                       fontFamily: "var(--font-cormorant)",
-                      color: "#FFFDF8",
+                      color: "#141118",
                       fontSize: "1.35rem",
                     }}
                   >
@@ -161,7 +161,7 @@ export default function WhyUs() {
                   </h3>
                   <p
                     className="text-sm leading-relaxed"
-                    style={{ color: "rgba(255,248,232,0.6)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+                    style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
                   >
                     {item.desc}
                   </p>

@@ -19,7 +19,7 @@ export default function ServiceAreas() {
       id="areas"
       ref={ref}
       className="py-20 lg:py-28"
-      style={{ backgroundColor: "#1E1929" }}
+      style={{ backgroundColor: "#FFFDF8" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16">
@@ -42,7 +42,7 @@ export default function ServiceAreas() {
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(28px, 3.5vw, 44px)",
                 fontWeight: 700,
-                color: "#FFFDF8",
+                color: "#141118",
                 letterSpacing: "-0.02em",
               }}
             >
@@ -51,7 +51,7 @@ export default function ServiceAreas() {
             </h2>
             <p
               className="text-sm mb-6"
-              style={{ color: "rgba(255,248,232,0.55)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+              style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
             >
               No travel fees within our service zone. We cover the full Tucson metro area.
             </p>
@@ -81,7 +81,7 @@ export default function ServiceAreas() {
                 style={{
                   backgroundColor: "rgba(255,117,24,0.08)",
                   border: "1px solid rgba(255,117,24,0.2)",
-                  color: "rgba(255,248,232,0.8)",
+                  color: "#141118",
                   fontFamily: "var(--font-sora)",
                 }}
               >
@@ -92,7 +92,7 @@ export default function ServiceAreas() {
             {/* Edge-zone line */}
             <p
               className="w-full text-sm mt-1"
-              style={{ color: "rgba(255,248,232,0.4)", fontFamily: "var(--font-sora)", fontSize: "13px" }}
+              style={{ color: "rgba(20,17,24,0.45)", fontFamily: "var(--font-sora)", fontSize: "13px" }}
             >
               Don&apos;t see your city? Call Jeremiah —{" "}
               <a

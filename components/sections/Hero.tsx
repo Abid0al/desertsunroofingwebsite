@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       className="grain-overlay relative min-h-screen flex items-center overflow-hidden"
-      style={{ backgroundColor: "#141118" }}
+      style={{ backgroundColor: "#FFF8E8" }}
     >
       {/* YouTube video background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -48,7 +48,7 @@ export default function Hero() {
       {/* Dark overlay — keeps text readable over the video */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ backgroundColor: "rgba(20,17,24,0.70)" }}
+        style={{ backgroundColor: "rgba(255,248,232,0.82)" }}
       />
 
       {/* Mountain peaks watermark — ties to logo motif */}
@@ -110,7 +110,7 @@ export default function Hero() {
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(52px, 7vw, 92px)",
                 fontWeight: 700,
-                color: "#FFFDF8",
+                color: "#141118",
                 letterSpacing: "-0.02em",
                 lineHeight: 1.0,
               }}
@@ -130,7 +130,7 @@ export default function Hero() {
               variants={fadeUp}
               className="text-lg leading-relaxed max-w-xl"
               style={{
-                color: "rgba(255,248,232,0.80)",
+                color: "rgba(20,17,24,0.70)",
                 fontFamily: "var(--font-sora)",
                 lineHeight: 1.7,
               }}
@@ -177,8 +177,8 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-base rounded-sm transition-all duration-200 cursor-pointer"
                 style={{
                   backgroundColor: "transparent",
-                  color: "#FFFDF8",
-                  border: "1px solid rgba(255,253,248,0.30)",
+                  color: "#141118",
+                  border: "1px solid rgba(20,17,24,0.25)",
                   fontFamily: "var(--font-sora)",
                 }}
                 onMouseEnter={(e) => {
@@ -188,8 +188,8 @@ export default function Hero() {
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLButtonElement;
-                  el.style.borderColor = "rgba(255,253,248,0.30)";
-                  el.style.color = "#FFFDF8";
+                  el.style.borderColor = "rgba(20,17,24,0.25)";
+                  el.style.color = "#141118";
                 }}
               >
                 See How We Saved One Homeowner $11,000 →
@@ -208,10 +208,10 @@ export default function Hero() {
                 <span
                   key={i}
                   className="text-xs font-medium"
-                  style={{ color: "rgba(255,248,232,0.60)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "rgba(20,17,24,0.50)", fontFamily: "var(--font-sora)" }}
                 >
                   {i > 0 && (
-                    <span style={{ marginRight: "1rem", color: "rgba(255,117,24,0.5)" }}>·</span>
+                    <span style={{ marginRight: "1rem", color: "rgba(20,17,24,0.25)" }}>·</span>
                   )}
                   {item}
                 </span>
@@ -229,10 +229,10 @@ export default function Hero() {
             <div
               className="p-8 rounded-sm flex flex-col gap-6"
               style={{
-                backgroundColor: "rgba(20,17,24,0.75)",
+                backgroundColor: "rgba(255,253,248,0.92)",
                 border: "1px solid rgba(255,117,24,0.25)",
                 backdropFilter: "blur(12px)",
-                boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
+                boxShadow: "0 8px 40px rgba(20,17,24,0.10)",
               }}
             >
               <div>
@@ -244,7 +244,7 @@ export default function Hero() {
                 </p>
                 <p
                   className="text-2xl font-bold leading-tight"
-                  style={{ fontFamily: "var(--font-cormorant)", color: "#FFFDF8", fontSize: "1.6rem" }}
+                  style={{ fontFamily: "var(--font-cormorant)", color: "#141118", fontSize: "1.6rem" }}
                 >
                   &ldquo;18 years. 500+ Tucson roofs. Not one unresolved complaint.&rdquo;
                 </p>
@@ -259,7 +259,7 @@ export default function Hero() {
                     <span style={{ color: "#FF7518", flexShrink: 0, marginTop: "3px" }}>✓</span>
                     <span
                       className="text-sm"
-                      style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
+                      style={{ color: "rgba(20,17,24,0.65)", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
                     >
                       {b}
                     </span>
@@ -269,7 +269,7 @@ export default function Hero() {
               <a
                 href="tel:5203701039"
                 className="flex items-center gap-3 pt-4 border-t"
-                style={{ borderColor: "rgba(255,117,24,0.2)" }}
+                style={{ borderColor: "rgba(20,17,24,0.12)" }}
               >
                 <div
                   className="w-9 h-9 rounded-sm flex items-center justify-center shrink-0"
@@ -278,10 +278,10 @@ export default function Hero() {
                   <Phone size={15} style={{ color: "#FFFDF8" }} />
                 </div>
                 <div>
-                  <p className="text-xs" style={{ color: "rgba(255,248,232,0.5)", fontFamily: "var(--font-sora)" }}>
+                  <p className="text-xs" style={{ color: "rgba(20,17,24,0.45)", fontFamily: "var(--font-sora)" }}>
                     Call Jeremiah Directly
                   </p>
-                  <p className="text-base font-semibold" style={{ color: "#FFFDF8", fontFamily: "var(--font-sora)" }}>
+                  <p className="text-base font-semibold" style={{ color: "#141118", fontFamily: "var(--font-sora)" }}>
                     (520) 370-1039
                   </p>
                 </div>
@@ -294,7 +294,7 @@ export default function Hero() {
       {/* Bottom fade to next section */}
       <div
         className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #141118)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #FFFDF8)" }}
       />
     </section>
   );

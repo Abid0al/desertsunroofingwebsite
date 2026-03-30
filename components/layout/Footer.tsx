@@ -12,7 +12,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#141118", borderTop: "1px solid rgba(255,117,24,0.15)" }}>
+    <footer style={{ backgroundColor: "#FFFDF8", borderTop: "1px solid rgba(20,17,24,0.1)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Col 1 — Brand */}
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             <p
               className="text-sm leading-relaxed"
-              style={{ color: "rgba(255,248,232,0.5)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+              style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
             >
               Family-owned flat roof specialists serving Tucson since 2007.
               Owner Jeremiah Nidey on every job.
@@ -42,7 +42,7 @@ export default function Footer() {
                 style={{
                   backgroundColor: "rgba(255,117,24,0.1)",
                   border: "1px solid rgba(255,117,24,0.2)",
-                  color: "rgba(255,248,232,0.6)",
+                  color: "rgba(20,17,24,0.5)",
                   fontFamily: "var(--font-sora)",
                 }}
                 onMouseEnter={(e) => {
@@ -51,7 +51,7 @@ export default function Footer() {
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,117,24,0.1)";
-                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,248,232,0.6)";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(20,17,24,0.5)";
                 }}
               >
                 G{/* TODO: replace with direct GBP URL from client */}
@@ -72,7 +72,7 @@ export default function Footer() {
                 <li
                   key={s}
                   className="text-sm"
-                  style={{ color: "rgba(255,248,232,0.55)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                 >
                   {s}
                 </li>
@@ -94,9 +94,9 @@ export default function Footer() {
                 <a
                   href="tel:5203701039"
                   className="text-sm transition-colors duration-150"
-                  style={{ color: "rgba(255,248,232,0.65)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#FF7518")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,248,232,0.65)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "#8A7A8E")}
                 >
                   (520) 370-1039
                 </a>
@@ -106,9 +106,9 @@ export default function Footer() {
                 <a
                   href="mailto:jeremiah@desertsunroofing.com"
                   className="text-sm transition-colors duration-150 break-all"
-                  style={{ color: "rgba(255,248,232,0.65)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#FF7518")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,248,232,0.65)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "#8A7A8E")}
                 >
                   jeremiah@desertsunroofing.com
                 </a>
@@ -117,7 +117,7 @@ export default function Footer() {
                 <MapPin size={13} style={{ color: "#FF7518", flexShrink: 0, marginTop: "3px" }} />
                 <span
                   className="text-sm"
-                  style={{ color: "rgba(255,248,232,0.65)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                 >
                   5210 E Pima St Suite 200B<br />
                   Tucson, AZ 85712
@@ -127,7 +127,7 @@ export default function Footer() {
                 <Clock size={13} style={{ color: "#FF7518", flexShrink: 0 }} />
                 <span
                   className="text-sm"
-                  style={{ color: "rgba(255,248,232,0.65)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                 >
                   Mon–Sun · 7AM–6PM
                 </span>
@@ -139,17 +139,17 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="mt-12 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3"
-          style={{ borderTop: "1px solid rgba(255,117,24,0.12)" }}
+          style={{ borderTop: "1px solid rgba(20,17,24,0.08)" }}
         >
           <p
             className="text-xs"
-            style={{ color: "rgba(255,248,232,0.3)", fontFamily: "var(--font-sora)" }}
+            style={{ color: "rgba(20,17,24,0.35)", fontFamily: "var(--font-sora)" }}
           >
             © 2025 Desert Sun Roofing & Reflective Coatings LLC · ROC #229958 / #347187 · All Rights Reserved
           </p>
           <p
             className="text-xs italic"
-            style={{ color: "rgba(255,248,232,0.25)", fontFamily: "var(--font-sora)", maxWidth: "420px" }}
+            style={{ color: "rgba(20,17,24,0.30)", fontFamily: "var(--font-sora)", maxWidth: "420px" }}
           >
             Note: We are not affiliated with any Phoenix-area company using a similar name.
             Desert Sun Roofing is a Tucson-only company.

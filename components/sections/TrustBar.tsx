@@ -20,11 +20,11 @@ export default function TrustBar() {
   return (
     <section
       ref={ref}
-      style={{ backgroundColor: "#1E1929" }}
+      style={{ backgroundColor: "#FFFDF8" }}
       className="py-6 border-t border-b"
       id="trust"
     >
-      <style>{`#trust { border-color: rgba(255,117,24,0.2); }`}</style>
+      <style>{`#trust { border-color: rgba(20,17,24,0.1); }`}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center lg:justify-between gap-6 lg:gap-0">
           {credentials.map((cred, i) => (
@@ -49,13 +49,13 @@ export default function TrustBar() {
               <div>
                 <p
                   className="text-sm font-semibold leading-tight"
-                  style={{ color: "#FFFDF8", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#141118", fontFamily: "var(--font-sora)" }}
                 >
                   {cred.label}
                 </p>
                 <p
                   className="text-xs leading-tight mt-0.5"
-                  style={{ color: "rgba(255,248,232,0.55)", fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)" }}
                 >
                   {cred.sub}
                 </p>
