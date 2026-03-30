@@ -48,7 +48,7 @@ export default function Hero() {
       {/* Dark overlay — keeps text readable over the video */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ backgroundColor: "transparent" }}
+        style={{ backgroundColor: "rgba(20,17,24,0.45)" }}
       />
 
       {/* Mountain peaks watermark — ties to logo motif */}

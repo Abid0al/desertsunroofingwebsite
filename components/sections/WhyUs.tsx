@@ -46,7 +46,11 @@ export default function WhyUs() {
         className="absolute inset-0 w-full h-full"
         style={{ objectFit: "cover", objectPosition: "center 40%" }}
       />
-      {/* No overlay — image at 100% opacity */}
+      {/* Dark overlay — image visible through dark tint */}
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: "rgba(20,17,24,0.45)" }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Left — all content */}
