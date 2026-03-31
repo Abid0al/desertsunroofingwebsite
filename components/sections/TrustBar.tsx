@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { Star, Shield, Clock, Award, CheckCircle } from "lucide-react";
 
 const credentials = [
-  { icon: Star, label: "87 Five-Star Reviews", sub: "100% — no exceptions" }, // TODO: update review count monthly from Google Business Profile
+  { icon: Star, label: "100+ Five-Star Reviews", sub: "100% — no exceptions" },
   { icon: Shield, label: "BBB A+", sub: "Accredited Since 2007" },
   { icon: Clock, label: "18 Years", sub: "Serving Tucson Since 2007" },
   { icon: CheckCircle, label: "ROC Licensed", sub: "#229958 / #347187" },
