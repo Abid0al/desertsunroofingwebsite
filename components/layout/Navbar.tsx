@@ -32,9 +32,9 @@ export default function Navbar() {
       <motion.header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          backgroundColor: scrolled ? "#FFFDF8" : "transparent",
-          boxShadow: scrolled ? "0 2px 20px rgba(20,17,24,0.08)" : "none",
-          backdropFilter: scrolled ? "blur(0px)" : "blur(8px)",
+          backgroundColor: scrolled ? "rgba(20,17,24,0.95)" : "transparent",
+          boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.3)" : "none",
+          backdropFilter: "none",
         }}
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -65,14 +65,14 @@ export default function Navbar() {
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
                   className="text-sm font-medium transition-colors duration-200 cursor-pointer"
-                  style={{ color: "#141118", opacity: 0.8, fontFamily: "var(--font-sora)" }}
+                  style={{ color: "#FFFDF8", opacity: 0.85, fontFamily: "var(--font-sora)" }}
                   onMouseEnter={(e) => {
                     (e.target as HTMLButtonElement).style.color = "#FF7518";
                     (e.target as HTMLButtonElement).style.opacity = "1";
                   }}
                   onMouseLeave={(e) => {
-                    (e.target as HTMLButtonElement).style.color = "#141118";
-                    (e.target as HTMLButtonElement).style.opacity = "0.8";
+                    (e.target as HTMLButtonElement).style.color = "#FFFDF8";
+                    (e.target as HTMLButtonElement).style.opacity = "0.85";
                   }}
                 >
                   {link.label}
@@ -86,8 +86,8 @@ export default function Navbar() {
                 href="tel:5203701039"
                 className="flex items-center gap-2 text-sm font-medium px-3 py-1.5 rounded-full border transition-all duration-200"
                 style={{
-                  color: "#141118",
-                  borderColor: "rgba(20,17,24,0.2)",
+                  color: "#FFFDF8",
+                  borderColor: "rgba(255,253,248,0.3)",
                   fontFamily: "var(--font-sora)",
                 }}
                 onMouseEnter={(e) => {
@@ -97,8 +97,8 @@ export default function Navbar() {
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
-                  el.style.borderColor = "rgba(20,17,24,0.2)";
-                  el.style.color = "#141118";
+                  el.style.borderColor = "rgba(255,253,248,0.3)";
+                  el.style.color = "#FFFDF8";
                 }}
               >
                 <Phone size={14} />
@@ -127,7 +127,7 @@ export default function Navbar() {
             {/* Mobile hamburger */}
             <button
               className="lg:hidden p-2 rounded-sm"
-              style={{ color: "#141118" }}
+              style={{ color: "#FFFDF8" }}
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
