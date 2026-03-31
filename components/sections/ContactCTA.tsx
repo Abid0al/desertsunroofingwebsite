@@ -53,17 +53,15 @@ export default function ContactCTA() {
     <section
       id="contact"
       ref={ref}
-      className="grain-overlay relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#FFF8E8" }}
+      className="grain-overlay relative py-24 lg:py-32 overflow-hidden min-h-screen flex flex-col justify-center border-t"
+      style={{ backgroundColor: "#FFF8E8", borderColor: "rgba(20,17,24,0.08)" }}
     >
       {/* Atmospheric glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,117,24,0.08) 0%, transparent 65%),
-            radial-gradient(ellipse 50% 40% at 80% 15%, rgba(127,0,255,0.05) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 30% at 15% 20%, rgba(127,0,255,0.03) 0%, transparent 55%)
+            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,117,24,0.08) 0%, transparent 65%)
           `,
         }}
       />

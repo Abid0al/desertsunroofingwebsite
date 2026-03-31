@@ -24,7 +24,7 @@ export default function Partners() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center gap-8 lg:gap-12">
+        <div className="flex flex-col items-center gap-6">
           <motion.p
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
@@ -34,8 +34,7 @@ export default function Partners() {
           >
             Certified By
           </motion.p>
-          <div className="w-px h-6 hidden sm:block" style={{ backgroundColor: "rgba(20,17,24,0.15)" }} />
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-8 lg:gap-12">
+          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
             {partners.map((p, i) => (
               <motion.img
                 key={p.alt}

@@ -18,7 +18,7 @@ export default function JeremiahStory() {
     <section
       id="story"
       ref={ref}
-      className="py-24 lg:py-0 overflow-hidden"
+      className="py-24 lg:py-0 overflow-hidden min-h-screen flex flex-col justify-center"
       style={{ backgroundColor: "#FFF8E8" }}
     >
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-5">
@@ -36,14 +36,6 @@ export default function JeremiahStory() {
               alt="Jeremiah Nidey applying roof coating on a Tucson flat roof at dusk"
               className="w-full h-full object-cover"
               style={{ minHeight: "520px" }}
-            />
-            {/* Warm treatment */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: "linear-gradient(135deg, rgba(127,0,255,0.25) 0%, transparent 60%)",
-                mixBlendMode: "multiply",
-              }}
             />
             {/* Since 2007 badge */}
             <div

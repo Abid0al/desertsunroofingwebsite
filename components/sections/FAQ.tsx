@@ -95,7 +95,7 @@ export default function FAQ() {
     <section
       id="faq"
       ref={ref}
-      className="py-24 lg:py-32"
+      className="py-24 lg:py-32 min-h-screen flex flex-col justify-center"
       style={{ backgroundColor: "#FFF8E8" }}
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

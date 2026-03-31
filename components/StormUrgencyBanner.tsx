@@ -1,13 +1,24 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+
 export default function StormUrgencyBanner() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
-      style={{ backgroundColor: "#FFF3DC", borderTop: "1px solid rgba(255,117,24,0.25)", borderBottom: "1px solid rgba(255,117,24,0.25)" }}
+      ref={ref}
+      style={{
+        backgroundColor: "#FFF3DC",
+        borderTop: "1px solid rgba(255,117,24,0.25)",
+        borderBottom: "1px solid rgba(255,117,24,0.25)",
+      }}
       className="relative overflow-hidden"
     >
       {/* Subtle noise texture layer */}
@@ -21,7 +32,12 @@ export default function StormUrgencyBanner() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="flex flex-col sm:flex-row sm:items-center gap-6 lg:gap-10">
           {/* Text block */}
-          <div className="flex-1">
+          <motion.div
+            className="flex-1"
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <h2
               className="font-bold mb-2 leading-tight"
               style={{
@@ -44,10 +60,15 @@ export default function StormUrgencyBanner() {
               Every hour a flat roof leaks, water works deeper into your home&apos;s structure.
               Mold begins within 24–48 hours. The longer you wait, the more it costs.
             </p>
-          </div>
+          </motion.div>
 
           {/* CTA block */}
-          <div className="flex flex-col gap-3 shrink-0">
+          <motion.div
+            className="flex flex-col gap-3 shrink-0"
+            initial={{ opacity: 0, x: 24 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
             <a
               href="tel:5203701039"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-sm font-semibold text-sm whitespace-nowrap transition-all duration-200"
@@ -85,7 +106,7 @@ export default function StormUrgencyBanner() {
             >
               Or schedule a same-day free inspection →
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
