@@ -49,8 +49,8 @@ export default function Reviews() {
     <section
       id="reviews"
       ref={ref}
-      className="py-24 lg:py-32"
-      style={{ backgroundColor: "#FFF8E8" }}
+      className="py-24 lg:py-32 border-t min-h-screen"
+      style={{ backgroundColor: "#FFF8E8", borderColor: "rgba(20,17,24,0.08)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}

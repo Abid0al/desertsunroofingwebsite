@@ -35,7 +35,7 @@ export default function WhyUs() {
     <section
       id="why"
       ref={ref}
-      className="relative overflow-hidden"
+      className="relative overflow-hidden min-h-screen flex flex-col justify-center"
       style={{ backgroundColor: "#141118" }}
     >
       {/* Background image */}
@@ -49,7 +49,7 @@ export default function WhyUs() {
       {/* Dark overlay — image visible through dark tint */}
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(20,17,24,0.45)" }}
+        style={{ backgroundColor: "rgba(20,17,24,0.80)" }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -76,7 +76,6 @@ export default function WhyUs() {
                 color: "#FFFDF8",
                 letterSpacing: "-0.02em",
                 lineHeight: 1.1,
-                textShadow: "0 2px 16px rgba(0,0,0,0.8)",
               }}
             >
               Why Tucson Homeowners
@@ -106,7 +105,6 @@ export default function WhyUs() {
                   fontStyle: "italic",
                   color: "rgba(255,248,232,0.90)",
                   lineHeight: 1.4,
-                  textShadow: "0 1px 10px rgba(0,0,0,0.7)",
                 }}
               >
                 &ldquo;We have never received a negative review or had an AZ ROC complaint filed —
@@ -122,7 +120,7 @@ export default function WhyUs() {
           </motion.div>
 
           {/* 2×2 grid */}
-          <div className="grid sm:grid-cols-2 gap-px" style={{ border: "1px solid rgba(255,117,24,0.2)" }}>
+          <div className="grid sm:grid-cols-2 gap-px" style={{ border: "1px solid rgba(20,17,24,0.08)" }}>
             {differentiators.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -131,16 +129,15 @@ export default function WhyUs() {
                 transition={{ delay: 0.15 + i * 0.09, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="group p-7 lg:p-8 flex flex-col gap-4 transition-colors duration-300"
                 style={{
-                  backgroundColor: "rgba(20,17,24,0.70)",
-                  backdropFilter: "blur(8px)",
-                  borderRight: i % 2 === 0 ? "1px solid rgba(255,117,24,0.15)" : "none",
-                  borderBottom: i < 2 ? "1px solid rgba(255,117,24,0.15)" : "none",
+                  backgroundColor: "#FFFFFF",
+                  borderRight: i % 2 === 0 ? "1px solid rgba(20,17,24,0.08)" : "none",
+                  borderBottom: i < 2 ? "1px solid rgba(20,17,24,0.08)" : "none",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(20,17,24,0.85)";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFF8E8";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(20,17,24,0.70)";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "#FFFFFF";
                 }}
               >
                 <div
@@ -154,7 +151,7 @@ export default function WhyUs() {
                     className="font-bold mb-2"
                     style={{
                       fontFamily: "var(--font-cormorant)",
-                      color: "#FFFDF8",
+                      color: "#141118",
                       fontSize: "1.35rem",
                     }}
                   >
@@ -162,7 +159,7 @@ export default function WhyUs() {
                   </h3>
                   <p
                     className="text-sm leading-relaxed"
-                    style={{ color: "rgba(255,248,232,0.65)", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
+                    style={{ color: "#8A7A8E", fontFamily: "var(--font-sora)", lineHeight: 1.7 }}
                   >
                     {item.desc}
                   </p>

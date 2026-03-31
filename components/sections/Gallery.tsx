@@ -76,7 +76,7 @@ function ProjectCard({ project, delay }: { project: typeof projects[0]; delay: n
               className="text-xs font-semibold px-3 py-1 rounded-sm capitalize transition-all duration-200 cursor-pointer"
               style={{
                 backgroundColor: showing === tab ? "#FF7518" : "rgba(20,17,24,0.75)",
-                color: "#141118",
+                color: "#ffffffff",
                 fontFamily: "var(--font-sora)",
                 backdropFilter: "blur(4px)",
               }}
@@ -127,7 +127,7 @@ export default function Gallery() {
     <section
       id="gallery"
       ref={ref}
-      className="py-24 lg:py-32"
+      className="py-24 lg:py-32 min-h-screen flex flex-col justify-center"
       style={{ backgroundColor: "#FFF8E8" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

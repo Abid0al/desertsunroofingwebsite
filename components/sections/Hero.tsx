@@ -48,7 +48,7 @@ export default function Hero() {
       {/* Dark overlay — keeps text readable over the video */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ backgroundColor: "rgba(20,17,24,0.45)" }}
+        style={{ backgroundColor: "rgba(20,17,24,0.80)" }}
       />
 
       {/* Mountain peaks watermark — ties to logo motif */}
@@ -62,16 +62,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Atmospheric glow — amber sunrise from below, purple sky upper-right */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `
-            radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255,117,24,0.18) 0%, transparent 70%),
-            radial-gradient(ellipse 45% 45% at 85% 10%, rgba(127,0,255,0.15) 0%, transparent 65%)
-          `,
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-28">
@@ -113,7 +103,6 @@ export default function Hero() {
                 color: "#FFFDF8",
                 letterSpacing: "-0.02em",
                 lineHeight: 1.0,
-                textShadow: "0 2px 20px rgba(0,0,0,0.7)",
               }}
             >
               No Leaks. No Subcontractors.{" "}
@@ -134,7 +123,6 @@ export default function Hero() {
                 color: "rgba(255,248,232,0.90)",
                 fontFamily: "var(--font-sora)",
                 lineHeight: 1.7,
-                textShadow: "0 1px 12px rgba(0,0,0,0.6)",
               }}
             >
               Most Tucson homeowners have been burned by a crew that sent strangers, cut
@@ -204,18 +192,19 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="flex flex-wrap items-center gap-4 pt-2"
+              className="flex flex-wrap items-center gap-x-3 gap-y-2 pt-2"
             >
               {["⭐ 5.0 Google (100+ Reviews)", "BBB A+ Since 2007", "ROC Licensed #229958", "500+ Tucson Roofs Completed"].map((item, i) => (
-                <span
-                  key={i}
-                  className="text-xs font-medium"
-                  style={{ color: "rgba(255,248,232,0.70)", fontFamily: "var(--font-sora)", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
-                >
+                <span key={i} className="flex items-center gap-3">
                   {i > 0 && (
-                    <span style={{ marginRight: "1rem", color: "rgba(255,117,24,0.5)" }}>·</span>
+                    <span style={{ color: "rgba(255,117,24,0.5)" }}>·</span>
                   )}
-                  {item}
+                  <span
+                    className="text-xs font-medium"
+                    style={{ color: "rgba(255,248,232,0.70)", fontFamily: "var(--font-sora)" }}
+                  >
+                    {item}
+                  </span>
                 </span>
               ))}
             </motion.div>
@@ -231,10 +220,10 @@ export default function Hero() {
             <div
               className="p-8 rounded-sm flex flex-col gap-6"
               style={{
-                backgroundColor: "rgba(20,17,24,0.75)",
-                border: "1px solid rgba(255,117,24,0.25)",
+                backgroundColor: "#FFFFFF",
+                border: "1px solid rgba(255,117,24,0.2)",
                 backdropFilter: "blur(12px)",
-                boxShadow: "0 8px 40px rgba(0,0,0,0.5)",
+                boxShadow: "0 8px 40px rgba(0,0,0,0.25)",
               }}
             >
               <div>
@@ -246,7 +235,7 @@ export default function Hero() {
                 </p>
                 <p
                   className="text-2xl font-bold leading-tight"
-                  style={{ fontFamily: "var(--font-cormorant)", color: "#FFFDF8", fontSize: "1.6rem" }}
+                  style={{ fontFamily: "var(--font-cormorant)", color: "#141118", fontSize: "1.6rem" }}
                 >
                   &ldquo;18 years. 500+ Tucson roofs. Not one unresolved complaint.&rdquo;
                 </p>
@@ -261,7 +250,7 @@ export default function Hero() {
                     <span style={{ color: "#FF7518", flexShrink: 0, marginTop: "3px" }}>✓</span>
                     <span
                       className="text-sm"
-                      style={{ color: "rgba(255,248,232,0.75)", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
+                      style={{ color: "rgba(20,17,24,0.65)", fontFamily: "var(--font-sora)", lineHeight: 1.55 }}
                     >
                       {b}
                     </span>
@@ -271,7 +260,7 @@ export default function Hero() {
               <a
                 href="tel:5203701039"
                 className="flex items-center gap-3 pt-4 border-t"
-                style={{ borderColor: "rgba(255,117,24,0.2)" }}
+                style={{ borderColor: "rgba(20,17,24,0.1)" }}
               >
                 <div
                   className="w-9 h-9 rounded-sm flex items-center justify-center shrink-0"
@@ -280,10 +269,10 @@ export default function Hero() {
                   <Phone size={15} style={{ color: "#FFFDF8" }} />
                 </div>
                 <div>
-                  <p className="text-xs" style={{ color: "rgba(255,248,232,0.5)", fontFamily: "var(--font-sora)" }}>
+                  <p className="text-xs" style={{ color: "rgba(20,17,24,0.45)", fontFamily: "var(--font-sora)" }}>
                     Call Jeremiah Directly
                   </p>
-                  <p className="text-base font-semibold" style={{ color: "#FFFDF8", fontFamily: "var(--font-sora)" }}>
+                  <p className="text-base font-semibold" style={{ color: "#141118", fontFamily: "var(--font-sora)" }}>
                     (520) 370-1039
                   </p>
                 </div>
